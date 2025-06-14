@@ -35,7 +35,9 @@ return {
         -- python = { "isort", "black" },
         --
         -- You can use 'stop_after_first' to run the first available formatter from the list
-        javascript = { 'prettier', stop_after_first = true },
+        -- javascript = { 'prettier', stop_after_first = true },
+        javascript = { 'eslint_d', stop_after_first = true },
+        go = { 'goimports', 'gofumpt' },
       },
     },
   },
