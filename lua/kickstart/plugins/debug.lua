@@ -76,6 +76,14 @@ return {
       end,
       desc = 'Debug: See last session result.',
     },
+    {
+      '<leader>t',
+      function()
+        require('dap').terminate()
+        require('dapui').close()
+      end,
+      desc = 'Debug: See last session result.',
+    },
   },
   config = function()
     local dap = require 'dap'
@@ -94,8 +102,12 @@ return {
       -- online, please don't ask me how to install them :)
       ensure_installed = {
         -- Update this to ensure that you have the debuggers for the langs you want
+        -- https://github.com/jay-babu/mason-nvim-dap.nvim/blob/main/lua/mason-nvim-dap/mappings/source.lua
         'delve',
         'js',
+        -- node-debug2-adapter
+        -- replace `type` property (vscode default: pwa-node) in launch.json with `node2`
+        'node2',
       },
     }
 
