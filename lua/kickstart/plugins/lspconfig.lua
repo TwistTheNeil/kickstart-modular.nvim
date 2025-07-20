@@ -218,36 +218,36 @@ return {
         --    https://github.com/pmizio/typescript-tools.nvim
         --
         -- But for many setups, the LSP (`ts_ls`) will work just fine
-        ts_ls = {
-          settings = {
-            typescript = {
-              -- https://code.visualstudio.com/docs/typescript/typescript-editing#_inlay-hints
-              inlayHints = {
-                enumMemberValues = { enabled = true },
-                functionLikeReturnTypes = { enabled = true },
-                parameterNames = { enabled = 'literals' },
-                parameterTypes = { enabled = true },
-                propertyDeclarationTypes = { enabled = true },
-                variableTypes = { enabled = true },
-              },
-            },
-          },
-          init_options = {
-            plugins = {
-              {
-                name = '@vue/typescript-plugin',
-                -- location MUST be present
-                location = '',
-                languages = { 'vue' },
-              },
-            },
-          },
-          filetypes = {
-            'javascript',
-            'typescript',
-            'vue',
-          },
-        },
+        -- ts_ls = {
+        --   settings = {
+        --     typescript = {
+        --       -- https://code.visualstudio.com/docs/typescript/typescript-editing#_inlay-hints
+        --       inlayHints = {
+        --         enumMemberValues = { enabled = true },
+        --         functionLikeReturnTypes = { enabled = true },
+        --         parameterNames = { enabled = 'literals' },
+        --         parameterTypes = { enabled = true },
+        --         propertyDeclarationTypes = { enabled = true },
+        --         variableTypes = { enabled = true },
+        --       },
+        --     },
+        --   },
+        --   init_options = {
+        --     plugins = {
+        --       {
+        --         name = '@vue/typescript-plugin',
+        --         -- location MUST be present
+        --         location = '',
+        --         languages = { 'vue' },
+        --       },
+        --     },
+        --   },
+        --   filetypes = {
+        --     'javascript',
+        --     'typescript',
+        --     'vue',
+        --   },
+        -- },
         vtsls = {
           settings = {
             vtsls = {
