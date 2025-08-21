@@ -347,6 +347,11 @@ return {
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
+      -- https://github.com/vuejs/language-tools/wiki/Neovim
+      vim.lsp.config('vtsls', servers.vtsls)
+      vim.lsp.config('vue_ls', servers.vue_ls)
+      vim.lsp.enable { 'vtsls', 'vue_ls' }
+
       require('mason-lspconfig').setup {
         ensure_installed = {}, -- explicitly set to an empty table (Kickstart populates installs via mason-tool-installer)
         automatic_installation = false,
@@ -361,11 +366,6 @@ return {
           end,
         },
       }
-
-      -- https://github.com/vuejs/language-tools/wiki/Neovim
-      vim.lsp.config('vtsls', servers.vtsls)
-      vim.lsp.config('vue_ls', servers.vue_ls)
-      vim.lsp.enable { 'vtsls', 'vue_ls' }
     end,
   },
 }
